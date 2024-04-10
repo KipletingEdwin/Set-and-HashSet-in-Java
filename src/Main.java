@@ -1,8 +1,12 @@
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
+
+        // I don't want duplicates
+        //I don't care about the order
 
         Set<String> names = new HashSet<>();
 
@@ -16,10 +20,31 @@ public class Main {
 //        names.remove(0);  => does not work
 
         System.out.println(names);
-        names.clear();
         System.out.println(names.size());
         System.out.println(names.contains("Saul"));
         System.out.println(names.isEmpty());
+
+        //One method to print out
+
+        for (String name : names){
+            System.out.println(name);
+        }
+
+        System.out.println("Another method");
+
+        //Another method to pint it out
+
+        names.forEach(System.out::println);
+
+        //Another method
+        System.out.println("Another method");
+
+        Iterator<String> namesIterator = names.iterator();
+        while (namesIterator.hasNext()) {
+            System.out.println(namesIterator.next());
+        }
+
+
 
     }
 }
