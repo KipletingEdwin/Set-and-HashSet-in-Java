@@ -1,6 +1,4 @@
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,6 +41,20 @@ public class Main {
         while (namesIterator.hasNext()) {
             System.out.println(namesIterator.next());
         }
+
+        List<Integer> numberList = new ArrayList<>();
+        numberList.add(1);
+        numberList.add(2);
+        numberList.add(3);
+        numberList.add(2);
+        numberList.add(1);
+
+        System.out.println(numberList);
+
+        Set<Integer> numberSet = new HashSet<>(numberList);
+
+        System.out.println(numberSet);
+
 
 
 
